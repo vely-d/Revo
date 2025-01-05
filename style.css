@@ -311,6 +311,7 @@ button {
 
 .features__sub-title,
 .coffee__sub-title,
+.giftset__sub-title,
 .combo__sub-title {
     color: var(--main-col);
     font-size: 20px;
@@ -321,6 +322,7 @@ button {
 
 .features__title,
 .coffee__title,
+.giftset__title,
 .combo__title {
     color: var(--main-col);
     font-size: 31px;
@@ -443,6 +445,7 @@ button {
 }
 
 .coffee__item-price,
+.giftset__item-price,
 .combo__item-price {
     color: var(--accent1-col);
 
@@ -450,7 +453,8 @@ button {
     font-size: 20px;
 }
 
-.coffee__item-title {
+.coffee__item-title,
+.combo__item-title {
     font-size: 24px;
     font-weight: 700;
 
@@ -484,18 +488,16 @@ button {
     font-weight: 800;
 }
 
-/* ---------- combo ---------- */
+/* ---------- giftset ---------- */
 
-.combo {
+.giftset {
     background-color: var(--white-col);
 
     position: relative;
     padding: 86px 0 121px;
-
-    margin-bottom: 100px;
 }
 
-.combo:before {
+.giftset:before {
     content: "";
 
     position: absolute;
@@ -510,18 +512,18 @@ button {
     border: 4px solid var(--light-gray-col);
 }
 
-.combo__sub-title,
-.combo__title {
+.giftset__sub-title,
+.giftset__title {
     position: relative;
     right: 6px;
     z-index: 2;
 }
 
-.combo__title {
+.giftset__title {
     margin-bottom: 66px;
 }
 
-.combo__tabs {
+.giftset__tabs {
     width: 1138px;
     height: 463px;
 
@@ -533,7 +535,7 @@ button {
     z-index: 2;
 }
 
-.combo__tabs:before {
+.giftset__tabs:before {
     content: "";
     
     background-color: white;
@@ -548,7 +550,7 @@ button {
     box-shadow: 8px 0px 12px -5px #00000015;
 }
 
-.combo__tab {
+.giftset__tab {
     width: auto;
     height: 100%;
 
@@ -557,21 +559,21 @@ button {
     
 }
 
-.combo__tab-picture {
+.giftset__tab-picture {
     float: left;
 
     margin-right: 90px;
 }
 
-.combo__tab-info {
+.giftset__tab-info {
     padding-top: 10px;
 }
 
-.combo__item-price {
+.giftset__item-price {
     margin-bottom: 15px;
 }
 
-.combo__item-title {
+.giftset__item-title {
     font-size: 28px;
 
     margin-bottom: 9px;
@@ -579,7 +581,7 @@ button {
     letter-spacing: -2.1px;
 }
 
-.combo__item-text {
+.giftset__item-text {
     color: #151D28;
 
     font-weight: 100;
@@ -588,7 +590,7 @@ button {
     margin-bottom: 24px;
 }
 
-.combo__item-details {
+.giftset__item-details {
     color: #151D28;
 
     display: flex;
@@ -597,7 +599,7 @@ button {
     margin-bottom: 38px;
 }
 
-.combo__item-detail {
+.giftset__item-detail {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -605,27 +607,27 @@ button {
     height: 50px;
 }
 
-.combo__detail-icon {
+.giftset__detail-icon {
     height: 100%;
     margin-right: 11px;
 }
 
-.combo__detail-light {
+.giftset__detail-light {
     font-weight: 100;
 }
 
-.combo__detail-bold {
+.giftset__detail-bold {
     font-weight: 600;
 }
 
-.combo__item-footer {
+.giftset__item-footer {
     margin-top: auto;
     
     display: flex;
     align-items: center;
 }
 
-.combo__append-item-btn {
+.giftset__append-item-btn {
     background-color: var(--accent1-col);
     color: white;
     font-size: 16px;
@@ -637,12 +639,12 @@ button {
     margin-right: 125px;
 }
 
-.combo__more-link {
+.giftset__more-link {
     color: var(--main-col) !important;
     font-weight: 800;
 }
 
-.combo__tab-buttons-list {
+.giftset__tab-buttons-list {
     flex-basis: 88px;
     flex-shrink: 0;
 
@@ -655,7 +657,7 @@ button {
     z-index: -1; */
 }
 
-.combo__tab-btn {
+.giftset__tab-btn {
     height: 100%;
 
     button {
@@ -666,17 +668,12 @@ button {
         font-family: "Montserrat", serif;
         font-weight: 800;
         color: var(--main-col);
-        
-        /* background-color: var(--white-col); */
 
         opacity: 30%;
-
-        position: relative;
-        z-index: -1;
     }
 }
 
-.combo__tab-btn_selected {
+.giftset__tab-btn_selected {
     button {
         background-color: white;
 
@@ -688,4 +685,133 @@ button {
         position: relative;
         z-index: 2;
     }
+}
+
+/* ---------- combo ---------- */
+
+.combo {
+    background-color: var(--white-col);
+    position: relative;
+
+    padding: 87px 0 128px;
+
+    overflow: hidden;
+}
+
+.combo::before {
+    content: "";
+
+    background-color: var(--main-col);
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 323px;
+    height: 100%;
+}
+
+.combo__sub-title,
+.combo__title {
+    position: relative;
+    right: 5px;
+}
+
+.combo__title {
+    margin-bottom: 64px;
+}
+
+.combo__sets {
+    display: flex;
+    gap: 30px;
+
+    padding-left: 128px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.combo__item {
+    flex-basis: 360px;
+    flex-shrink: 0;
+
+    box-shadow: 0px 0px 30px #00000020;
+}
+
+.combo__item-picture {
+    width: 100%;
+    height: 300px;
+    background-color: var(--light-gray-col);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.combo__item-info {
+    background-color: white;
+
+    padding: 42px;
+}
+
+.combo__item-price {
+    margin-right: 15px;
+}
+
+.combo__item-price-before {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: line-through;
+
+    position: relative;
+    bottom: 4px;
+}
+
+.combo__item-title {
+    margin-bottom: 9px;
+}
+
+.combo__item-description {
+    margin-bottom: 32px;
+
+    letter-spacing: -0.1px;
+}
+
+.combo__item-footer {
+    margin-top: auto;
+    
+    display: flex;
+    align-items: end;
+}
+
+.combo__append-item-btn {
+    background-color: var(--accent1-col);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.35em 1.5em;
+    border-radius: 2em;
+
+    margin-right: 64px;
+}
+
+.combo__more-link {
+    color: var(--main-col) !important;
+    font-weight: 800;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+    padding: 18px 3px 18px 0px;
+}
+
+.footer__copyrights {
+    color: var(--main-col);
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
 }
