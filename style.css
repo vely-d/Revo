@@ -305,7 +305,7 @@ button {
 .features {
     background-color: var(--white-col);
     height: 598px;
-    padding: 90px 150px 0;
+    padding: 87px 150px 0;
     position: relative;
 }
 
@@ -314,22 +314,23 @@ button {
 .combo__sub-title {
     color: var(--main-col);
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
+    letter-spacing: 0.1px;
 }
 
 .features__title,
 .coffee__title,
 .combo__title {
     color: var(--main-col);
-    font-size: 34px;
+    font-size: 31px;
     font-family: "Montserrat", serif;
     font-weight: 900;
-    letter-spacing: -2.6px;
+    letter-spacing: -0.6px;
     text-align: center;
     text-transform: uppercase;
-
-    margin-bottom: 80px;
+    
+    margin-bottom: 91px;
 }
 
 .features__list {
@@ -350,7 +351,7 @@ button {
 }
 
 .features__item-pic {
-    margin-bottom: 42px;
+    margin-bottom: 37px;
 
     height: 80px;
 }
@@ -372,7 +373,7 @@ button {
 .coffee {
     background-color: var(--white-col);
     height: 894px;
-    padding: 90px 0 0 130px;
+    padding: 90px 0 0;
     position: relative;
 
     overflow: hidden;
@@ -392,6 +393,10 @@ button {
     height: 100%;
 }
 
+.coffee__title {
+    margin-bottom: 68px;
+}
+
 .coffee__items {
     display: flex;
     flex-direction: column;
@@ -403,6 +408,8 @@ button {
 
     position: relative;
     z-index: 2;
+
+    padding-left: 130px;
 }
 
 .coffee__item {
@@ -439,14 +446,15 @@ button {
 .combo__item-price {
     color: var(--accent1-col);
 
-    margin-bottom: 8px;
+    margin-bottom: 2px;
+    font-size: 20px;
 }
 
 .coffee__item-title {
     font-size: 24px;
     font-weight: 700;
 
-    margin-bottom: 24px;
+    margin-bottom: 22px;
 }
 
 /* .coffee__item-description {
@@ -457,7 +465,7 @@ button {
     margin-top: auto;
     
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .coffee__append-item-btn {
@@ -465,10 +473,10 @@ button {
     color: white;
     font-size: 16px;
     font-weight: 700;
-    padding: 0.5em 1.5em;
+    padding: 0.35em 1.5em;
     border-radius: 2em;
 
-    margin-right: 30px;
+    margin-right: 27px;
 }
 
 .coffee__more-link {
@@ -482,7 +490,7 @@ button {
     background-color: var(--white-col);
 
     position: relative;
-    padding: 86px 0 125px 128px;
+    padding: 86px 0 121px;
 
     margin-bottom: 100px;
 }
@@ -505,6 +513,7 @@ button {
 .combo__sub-title,
 .combo__title {
     position: relative;
+    right: 6px;
     z-index: 2;
 }
 
@@ -520,6 +529,7 @@ button {
     justify-content: end;
 
     position: relative;
+    left: 130px;
     z-index: 2;
 }
 
@@ -542,7 +552,7 @@ button {
     width: auto;
     height: 100%;
 
-    padding: 51px 66px 64px 0;
+    padding: 51px 67px 64px 0;
 
     
 }
@@ -550,12 +560,12 @@ button {
 .combo__tab-picture {
     float: left;
 
-    margin-right: 64px;
+    margin-right: 90px;
 }
 
-/* .combo__tab-info {
-    margin: 20px;
-} */
+.combo__tab-info {
+    padding-top: 10px;
+}
 
 .combo__item-price {
     margin-bottom: 15px;
@@ -564,13 +574,16 @@ button {
 .combo__item-title {
     font-size: 28px;
 
-    margin-bottom: 15px;
+    margin-bottom: 9px;
+    line-height: 1.4;
+    letter-spacing: -2.1px;
 }
 
 .combo__item-text {
     color: #151D28;
 
     font-weight: 100;
+    letter-spacing: 0.1px;
 
     margin-bottom: 24px;
 }
@@ -579,9 +592,9 @@ button {
     color: #151D28;
 
     display: flex;
-    gap: 60px;
+    gap: 70px;
 
-    margin-bottom: 46px;
+    margin-bottom: 38px;
 }
 
 .combo__item-detail {
@@ -594,7 +607,7 @@ button {
 
 .combo__detail-icon {
     height: 100%;
-    margin-right: 20px;
+    margin-right: 11px;
 }
 
 .combo__detail-light {
@@ -621,7 +634,7 @@ button {
     padding: 0.5em 2.5em;
     border-radius: 2em;
 
-    margin-right: 150px;
+    margin-right: 125px;
 }
 
 .combo__more-link {
