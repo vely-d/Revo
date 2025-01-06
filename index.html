@@ -20,8 +20,9 @@
                 <h1 class="hero__slogan">your <span class="highlight">personalized</span> coffee</h1>
             </div>
         </div>
-        <div class="hero__slider hero__slider_slide1">
-            <button class="hero__slider-btn" type="button" onclick="AnimateSlider();">
+        <div class="hero__banner hero__banner_slide1">
+            <video class="hero__banner-video hero__banner-video_hidden" id="hero__banner-video1" src="./sources/vid/coffee_video_banner.mp4" loop></video>
+            <button class="hero__banner-btn" type="button" onclick="toggleVideoPLayback();">
                 <img src="./sources/svg/Triangle.svg" alt="play" class="hero__play-pause-icon">
             </button>
         </div>
@@ -359,6 +360,23 @@
         <h4 class="footer__copyrights">© Revo Coffee Việt Nam - 2018</h4>
     </footer>
     <script>
+        // banner video playback
+
+        let videoIsPlaying = false;
+        let bannerVideo = document.getElementById("hero__banner-video1");
+
+        function toggleVideoPLayback() {
+            if(videoIsPlaying === false) {
+                bannerVideo.play();
+                bannerVideo.classList.remove("hero__banner-video_hidden");
+            }
+            else {
+                bannerVideo.pause();
+                bannerVideo.classList.add("hero__banner-video_hidden");
+            }
+            videoIsPlaying = !videoIsPlaying;
+        }
+
         // coffee tabs animation
 
         let currentPageIndex = 0;
