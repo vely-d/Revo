@@ -439,7 +439,8 @@ button {
     transition: opacity 0.5s ease;
 }
 
-.coffee__page-btn {
+.coffee__page-btn,
+.combo__swipe-btn {
     background-color: var(--accent1-col);
     background-image: url(sources/svg/arrow.svg);
     background-position: center;
@@ -455,13 +456,15 @@ button {
     z-index: 3;
 }
 
-.coffee__page-btn_prev {
-    left: 78px;
+.coffee__page-btn_prev,
+.combo__swipe-btn_prev {
+    left: 63px;
 
     rotate: 180deg;
 }
 
-.coffee__page-btn_next {
+.coffee__page-btn_next,
+.combo__swipe-btn_next {
     left: 1286px;
 }
 
@@ -784,6 +787,10 @@ button {
     right: 5px;
 }
 
+.combo__swipe-btn {
+    top: 448px;
+}
+
 .combo__title {
     margin-bottom: 64px;
 }
@@ -796,6 +803,9 @@ button {
 
     position: relative;
     z-index: 2;
+
+    right: 0;
+    transition: right 0.5s ease;
 }
 
 .combo__item {
@@ -803,6 +813,13 @@ button {
     flex-shrink: 0;
 
     box-shadow: 0px 0px 30px #00000020;
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.combo__item_hidden {
+    opacity: 0.3;
 }
 
 .combo__item-picture {

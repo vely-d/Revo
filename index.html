@@ -290,7 +290,9 @@
     <section class="combo container">
         <h3 class="combo__sub-title">Your Personalized Coffee</h3>
         <h2 class="combo__title">COMBO PHIN PHÊ</h2>
-        <div class="combo__sets">
+        <button class="combo__swipe-btn combo__swipe-btn_prev" type="button" onclick="prevComboItem()"></button>
+        <button class="combo__swipe-btn combo__swipe-btn_next" type="button" onclick="nextComboItem()"></button>
+        <div class="combo__sets" id="combo__sets1">
             <article class="combo__item">
                 <div class="combo__item-picture">
                     <img src="./sources/img/combo-item1.png" alt="Combo Revo Đậm Đà">
@@ -336,7 +338,7 @@
                     </div>
                 </div>
             </article>
-            <article class="combo__item">
+            <article class="combo__item combo__item_hidden">
                 <div class="combo__item-picture">
                     <img src="./sources/img/combo-item4.png" alt="Combo Revo Đậm Đà">
                 </div>
@@ -351,7 +353,6 @@
                     </div>
                 </div>
             </article>
-            
         </div>
     </section>
     <footer class="footer">
@@ -360,33 +361,33 @@
     <script>
         // coffee tabs animation
 
-        let currentItemPageIndex = 0;
+        let currentPageIndex = 0;
         let itemPages = document.getElementsByClassName("coffee__page");
         let coffeeItems = document.getElementById("coffee__items1");
 
         function nextItemTab() {
-            if(currentItemPageIndex == itemPages.length - 1) {
+            if(currentPageIndex == itemPages.length - 1) {
                 return;
             }
-            itemPages[currentItemPageIndex].classList.remove("coffee__page_current");
+            itemPages[currentPageIndex].classList.remove("coffee__page_current");
 
-            currentItemPageIndex +=1;
-            itemPages[currentItemPageIndex].classList.add("coffee__page_current");
+            currentPageIndex +=1;
+            itemPages[currentPageIndex].classList.add("coffee__page_current");
 
-            coffeeItems.style.right = `${currentItemPageIndex * 1150}px`;
+            coffeeItems.style.right = `${currentPageIndex * 1150}px`;
         }
 
         function prevItemTab() {
-            if(currentItemPageIndex == 0) {
+            if(currentPageIndex == 0) {
                 return;
             }
 
-            itemPages[currentItemPageIndex].classList.remove("coffee__page_current");
+            itemPages[currentPageIndex].classList.remove("coffee__page_current");
 
-            currentItemPageIndex -= 1;
-            itemPages[currentItemPageIndex].classList.add("coffee__page_current");
+            currentPageIndex -= 1;
+            itemPages[currentPageIndex].classList.add("coffee__page_current");
 
-            coffeeItems.style.right = `${currentItemPageIndex * 1150}px`;
+            coffeeItems.style.right = `${currentPageIndex * 1150}px`;
         }
 
         // giftset tabs animation
@@ -394,16 +395,6 @@
         let currentTabIndex = 0;
         let tabsList = document.getElementsByClassName("giftset__tab");
         let tabButtonsList = document.getElementsByClassName("giftset__tab-btn");
-
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        async function toggleClass(element, className, timeSpan) {
-            element.classList.add(className);
-            await sleep(timeSpan);
-            element.classList.remove(className);
-        }
 
         function switchTab(tabIndex) {
             if(currentTabIndex == tabIndex) {
@@ -417,6 +408,36 @@
             tabButtonsList[currentTabIndex].classList.add("giftset__tab-btn_selected");
 
             console.log("tab switched");
+        }
+
+        // combo items animation
+
+        let currentComboIndex = 0;
+        let comboItemsList = document.getElementsByClassName("combo__item");
+        let comboSets = document.getElementById("combo__sets1");
+
+        function nextComboItem() {
+            if(currentComboIndex >= comboItemsList.length - 3) {
+                return;
+            }
+            comboItemsList[currentComboIndex].classList.add("combo__item_hidden");
+
+            currentComboIndex +=1;
+            comboItemsList[currentComboIndex + 2].classList.remove("combo__item_hidden");
+
+            comboSets.style.right = `${currentComboIndex * 390}px`;
+        }
+
+        function prevComboItem() {
+            if(currentComboIndex <= 0) {
+                return;
+            }
+            comboItemsList[currentComboIndex + 2].classList.add("combo__item_hidden");
+
+            currentComboIndex -=1;
+            comboItemsList[currentComboIndex].classList.remove("combo__item_hidden");
+
+            comboSets.style.right = `${currentComboIndex * 390}px`;
         }
     </script>
 </body>
