@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -86,91 +86,97 @@
     <section class="coffee container">
         <h3 class="coffee__sub-title">Choose Your Favorite</h3>
         <h2 class="coffee__title">CHUẨN GU ĐÚNG VỊ</h2>
-        <div class="coffee__items">
-            <article class="coffee__item">
-                <div class="coffee__item-pic">
-                    <img src="./sources/img/item1.png" alt="coffee: Revo Morning">
-                </div>
-                <div class="coffee__item-info">
-                    <span class="coffee__item-price">99.000</span>
-                    <h4 class="coffee__item-title">REVO Morning</h4>
-                    <p class="coffee__item-description">đắng, hậu ngọt, hương hoa</p>
-                    <div class="coffee__item-footer">
-                        <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
-                        <a href="#" class="coffee__more-link">CHI TIẾT</a>
+        <button class="coffee__page-btn coffee__page-btn_prev" type="button" onclick="prevItemTab()"></button>
+        <button class="coffee__page-btn coffee__page-btn_next" type="button" onclick="nextItemTab()"></button>    
+        <div class="coffee__items" id="coffee__items1">
+            <div class="coffee__page coffee__page_current">
+                <article class="coffee__item">
+                    <div class="coffee__item-pic">
+                        <img src="./sources/img/item1.png" alt="coffee: Revo Morning">
                     </div>
-                </div>
-            </article>
-            <article class="coffee__item">
-                <div class="coffee__item-pic">
-                    <img src="./sources/img/item2.png" alt="coffee: Revo Origin">
-                </div>
-                <div class="coffee__item-info">
-                    <span class="coffee__item-price">139.000</span>
-                    <h4 class="coffee__item-title">REVO Origin</h4>
-                    <p class="coffee__item-description">hậu ngọt, ít đắng, vị chua dâu</p>
-                    <div class="coffee__item-footer">
-                        <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
-                        <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                    <div class="coffee__item-info">
+                        <span class="coffee__item-price">99.000</span>
+                        <h4 class="coffee__item-title">REVO Morning</h4>
+                        <p class="coffee__item-description">đắng, hậu ngọt, hương hoa</p>
+                        <div class="coffee__item-footer">
+                            <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
+                            <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="coffee__item">
-                <div class="coffee__item-pic">
-                    <img src="./sources/img/item3.png" alt="coffee: Revo Everyday">
-                </div>
-                <div class="coffee__item-info">
-                    <span class="coffee__item-price">85.000</span>
-                    <h4 class="coffee__item-title">REVO Everyday</h4>
-                    <p class="coffee__item-description">cân bằng, hậu đắng, vị chocolate</p>
-                    <div class="coffee__item-footer">
-                        <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
-                        <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                </article>
+                <article class="coffee__item">
+                    <div class="coffee__item-pic">
+                        <img src="./sources/img/item2.png" alt="coffee: Revo Origin">
                     </div>
-                </div>
-            </article>
-            <article class="coffee__item">
-                <div class="coffee__item-pic">
-                    <img src="./sources/img/item4.png" alt="coffee: Revo Đậm Đà">
-                </div>
-                <div class="coffee__item-info">
-                    <span class="coffee__item-price">75.000</span>
-                    <h4 class="coffee__item-title">REVO Đậm Đà</h4>
-                    <p class="coffee__item-description">đậm đà, đắng, truyền thống</p>
-                    <div class="coffee__item-footer">
-                        <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
-                        <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                    <div class="coffee__item-info">
+                        <span class="coffee__item-price">139.000</span>
+                        <h4 class="coffee__item-title">REVO Origin</h4>
+                        <p class="coffee__item-description">hậu ngọt, ít đắng, vị chua dâu</p>
+                        <div class="coffee__item-footer">
+                            <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
+                            <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="coffee__item">
-                <div class="coffee__item-pic">
-                    <img src="./sources/img/item5.png" alt="coffee: Revo Honey">
-                </div>
-                <div class="coffee__item-info">
-                    <span class="coffee__item-price">195.000</span>
-                    <h4 class="coffee__item-title">REVO Honey</h4>
-                    <p class="coffee__item-description">độ ngọt cao, hậu ngọt, chua họ táo</p>
-                    <div class="coffee__item-footer">
-                        <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
-                        <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                </article>
+                <article class="coffee__item">
+                    <div class="coffee__item-pic">
+                        <img src="./sources/img/item3.png" alt="coffee: Revo Everyday">
                     </div>
-                </div>
-            </article>
-            <article class="coffee__item">
-                <div class="coffee__item-pic">
-                    <img src="./sources/img/item6.png" alt="coffee: Revo Natural">
-                </div>
-                <div class="coffee__item-info">
-                    <span class="coffee__item-price">169.000</span>
-                    <h4 class="coffee__item-title">REVO Natural</h4>
-                    <p class="coffee__item-description">hậu ngọt, hương hoa, vị chua dâu</p>
-                    <div class="coffee__item-footer">
-                        <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
-                        <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                    <div class="coffee__item-info">
+                        <span class="coffee__item-price">85.000</span>
+                        <h4 class="coffee__item-title">REVO Everyday</h4>
+                        <p class="coffee__item-description">cân bằng, hậu đắng, vị chocolate</p>
+                        <div class="coffee__item-footer">
+                            <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
+                            <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+                <article class="coffee__item">
+                    <div class="coffee__item-pic">
+                        <img src="./sources/img/item4.png" alt="coffee: Revo Đậm Đà">
+                    </div>
+                    <div class="coffee__item-info">
+                        <span class="coffee__item-price">75.000</span>
+                        <h4 class="coffee__item-title">REVO Đậm Đà</h4>
+                        <p class="coffee__item-description">đậm đà, đắng, truyền thống</p>
+                        <div class="coffee__item-footer">
+                            <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
+                            <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                        </div>
+                    </div>
+                </article>    
+            </div>
+            <div class="coffee__page">
+                <article class="coffee__item">
+                    <div class="coffee__item-pic">
+                        <img src="./sources/img/item5.png" alt="coffee: Revo Honey">
+                    </div>
+                    <div class="coffee__item-info">
+                        <span class="coffee__item-price">195.000</span>
+                        <h4 class="coffee__item-title">REVO Honey</h4>
+                        <p class="coffee__item-description">độ ngọt cao, hậu ngọt, chua họ táo</p>
+                        <div class="coffee__item-footer">
+                            <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
+                            <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="coffee__item">
+                    <div class="coffee__item-pic">
+                        <img src="./sources/img/item6.png" alt="coffee: Revo Natural">
+                    </div>
+                    <div class="coffee__item-info">
+                        <span class="coffee__item-price">169.000</span>
+                        <h4 class="coffee__item-title">REVO Natural</h4>
+                        <p class="coffee__item-description">hậu ngọt, hương hoa, vị chua dâu</p>
+                        <div class="coffee__item-footer">
+                            <button type="button" class="coffee__append-item-btn">MUA NGAY</button>
+                            <a href="#" class="coffee__more-link">CHI TIẾT</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
     <section class="giftset container">
@@ -207,15 +213,76 @@
                     </div>
                 </div>
             </article>
+            <article class="giftset__tab display-none">
+                <div class="giftset__tab-picture">
+                    <img src="./sources/img/giftset-item2.png" alt="some giftset idk">
+                </div>
+                <div class="giftset__tab-info">
+                    <span class="giftset__item-price">385.000</span>
+                    <h4 class="giftset__item-title">Giftset "Cà phê сhin"</h4>
+                    <p class="giftset__item-text">Đây là một món quà tuyệt vời cho những ai yêu thích cà phê. Revo chọn những hạt cà phê ngon nhất và rang chúng theo công thức đặc biệt mà họ đã nhận được từ các chuyên gia giàu kinh nghiệm. Họ cũng yêu thương pha những tách cà phê để lộ hương vị thực sự của nó.</p>
+                    <div class="giftset__item-details">
+                        <div class="giftset__item-detail">
+                            <div class="giftset__detail-icon">
+                                <img src="./sources/svg/IC_coffee.svg" alt="coffee icon">
+                            </div>
+                            <span class="giftset__detail-light">Loại hạt</span>
+                            <span class="giftset__detail-bold">Fine Robusta Blend</span>
+                        </div>
+                        <div class="giftset__item-detail">
+                            <div class="giftset__detail-icon">
+                                <img src="./sources/svg/IC_Mountain.svg" alt="coffee icon">
+                            </div>
+                            <span class="giftset__detail-light">Độ cao</span>
+                            <span class="giftset__detail-bold">700 - 800m</span>
+                        </div>
+                    </div>
+                    <div class="giftset__item-footer">
+                        <button type="button" class="giftset__append-item-btn">MUA NGAY</button>
+                        <a href="#" class="giftset__more-link">CHI TIẾT</a>
+                    </div>
+                </div>
+            </article>
+            <article class="giftset__tab display-none">
+                <div class="giftset__tab-picture">
+                    <img src="./sources/img/giftset-item3.png" alt="some giftset idk">
+                </div>
+                <div class="giftset__tab-info">
+                    <span class="giftset__item-price">500.000</span>
+                    <h4 class="giftset__item-title">Bộ Quà Tặng Cao Cấp</h4>
+                    <p class="giftset__item-text">Sự lựa chọn hoàn hảo cho những người yêu thích cà phê thực sự. Revo tỉ mỉ chọn hạt cà phê, rang chúng bằng các công nghệ được phát triển bởi các thợ thủ công nổi tiếng. Với thái độ tôn kính và hiểu biết sâu sắc về kinh doanh cà phê, công ty cũng sản xuất những chiếc cốc được tạo ra đặc biệt để thưởng thức hương vị tinh khiết của cà phê.</p>
+                    <div class="giftset__item-details">
+                        <div class="giftset__item-detail">
+                            <div class="giftset__detail-icon">
+                                <img src="./sources/svg/IC_coffee.svg" alt="coffee icon">
+                            </div>
+                            <span class="giftset__detail-light">Loại hạt</span>
+                            <span class="giftset__detail-bold">Fine Robusta Blend</span>
+                        </div>
+                        <div class="giftset__item-detail">
+                            <div class="giftset__detail-icon">
+                                <img src="./sources/svg/IC_Mountain.svg" alt="coffee icon">
+                            </div>
+                            <span class="giftset__detail-light">Độ cao</span>
+                            <span class="giftset__detail-bold">700 - 800m</span>
+                        </div>
+                    </div>
+                    <div class="giftset__item-footer">
+                        <button type="button" class="giftset__append-item-btn">MUA NGAY</button>
+                        <a href="#" class="giftset__more-link">CHI TIẾT</a>
+                    </div>
+                </div>
+            </article>
+            
             <ul class="giftset__tab-buttons-list">
                 <li class="giftset__tab-btn giftset__tab-btn_selected">
-                    <button type="button">1</button>
+                    <button type="button" onclick="switchTab(0);">1</button>
                 </li>
                 <li class="giftset__tab-btn">
-                    <button type="button">2</button>
+                    <button type="button" onclick="switchTab(1);">2</button>
                 </li>
                 <li class="giftset__tab-btn">
-                    <button type="button">3</button>
+                    <button type="button" onclick="switchTab(2);">3</button>
                 </li>
             </ul>
         </div>
@@ -291,8 +358,65 @@
         <h4 class="footer__copyrights">© Revo Coffee Việt Nam - 2018</h4>
     </footer>
     <script>
-        function AnimateSlider() {
-            return;
+        // coffee tabs animation
+
+        let currentItemPageIndex = 0;
+        let itemPages = document.getElementsByClassName("coffee__page");
+        let coffeeItems = document.getElementById("coffee__items1");
+
+        function nextItemTab() {
+            if(currentItemPageIndex == itemPages.length - 1) {
+                return;
+            }
+            itemPages[currentItemPageIndex].classList.remove("coffee__page_current");
+
+            currentItemPageIndex +=1;
+            itemPages[currentItemPageIndex].classList.add("coffee__page_current");
+
+            coffeeItems.style.right = `${currentItemPageIndex * 1150}px`;
+        }
+
+        function prevItemTab() {
+            if(currentItemPageIndex == 0) {
+                return;
+            }
+
+            itemPages[currentItemPageIndex].classList.remove("coffee__page_current");
+
+            currentItemPageIndex -= 1;
+            itemPages[currentItemPageIndex].classList.add("coffee__page_current");
+
+            coffeeItems.style.right = `${currentItemPageIndex * 1150}px`;
+        }
+
+        // giftset tabs animation
+
+        let currentTabIndex = 0;
+        let tabsList = document.getElementsByClassName("giftset__tab");
+        let tabButtonsList = document.getElementsByClassName("giftset__tab-btn");
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function toggleClass(element, className, timeSpan) {
+            element.classList.add(className);
+            await sleep(timeSpan);
+            element.classList.remove(className);
+        }
+
+        function switchTab(tabIndex) {
+            if(currentTabIndex == tabIndex) {
+                return;
+            }
+            tabsList[currentTabIndex].classList.add("display-none");
+            tabButtonsList[currentTabIndex].classList.remove("giftset__tab-btn_selected")
+
+            currentTabIndex = tabIndex;
+            tabsList[currentTabIndex].classList.remove("display-none");
+            tabButtonsList[currentTabIndex].classList.add("giftset__tab-btn_selected");
+
+            console.log("tab switched");
         }
     </script>
 </body>

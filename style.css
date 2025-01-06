@@ -150,6 +150,10 @@ button {
     border: 2px solid black;
 }
 
+.display-none {
+    display: none;
+}
+
 /* ---------- hero ---------- */
 
 .container {
@@ -401,17 +405,68 @@ button {
 
 .coffee__items {
     display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 32px;
+
+    width: max-content;
+    height: 544px;
+
+    position: relative;
+    right: 0;
+    z-index: 2;
+
+    padding-left: 130px;
+
+
+    transition: right 0.5s ease;
+}
+
+.coffee__page {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 32px;
 
-    width: fit-content;
+    width: 1150px;
     height: 544px;
 
     position: relative;
     z-index: 2;
 
-    padding-left: 130px;
+    opacity: 0.3;
+
+    transition: opacity 0.5s ease;
+}
+
+.coffee__page-btn {
+    background-color: var(--accent1-col);
+    background-image: url(sources/svg/arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 50%;
+
+    width: 48px;
+    height: 48px;
+
+    position: absolute;
+    top: 471px;
+    z-index: 3;
+}
+
+.coffee__page-btn_prev {
+    left: 78px;
+
+    rotate: 180deg;
+}
+
+.coffee__page-btn_next {
+    left: 1286px;
+}
+
+.coffee__page_current {
+    opacity: 1;
 }
 
 .coffee__item {
@@ -554,10 +609,23 @@ button {
     width: auto;
     height: 100%;
 
-    padding: 51px 67px 64px 0;
+    /* padding: 51px 67px 64px 0; */
+    padding: 51px 153px 64px 0;
 
-    
+    opacity: 1;
+    transition: opacity 0.75s ease;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+.giftset__tab.display-none {
+    display: block;
+    opacity: 0;
+    transition: opacity, 0.75s ease;
+}
+
 
 .giftset__tab-picture {
     float: left;
@@ -650,11 +718,6 @@ button {
 
     display: flex;
     flex-direction: column;
-
-    /* background-color: var(--white-col); */
-
-    /* position: relative;
-    z-index: -1; */
 }
 
 .giftset__tab-btn {
@@ -669,7 +732,9 @@ button {
         font-weight: 800;
         color: var(--main-col);
 
-        opacity: 30%;
+        border: 0px solid var(--white-col);
+
+        opacity: 0.3;
     }
 }
 
@@ -678,12 +743,14 @@ button {
         background-color: white;
 
         color: var(--main-col);
-        opacity: 100%;
+        opacity: 1;
 
-        border: 2px solid var(--white-col);
-
+        border: 2px solid #fafafa;
+        
         position: relative;
         z-index: 2;
+
+        transition: opacity 0.75s ease;
     }
 }
 
